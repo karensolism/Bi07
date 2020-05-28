@@ -1,7 +1,7 @@
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
  * https://github.com/wenzhixin/bootstrap-show-password
- * version: 1.1.2
+ * version: 1.0.3
  */
 
 !function ($) {
@@ -49,8 +49,7 @@
         message: 'Click here to show/hide password',
         eyeClass: 'glyphicon',
         eyeOpenClass: 'glyphicon-eye-open',
-        eyeCloseClass: 'glyphicon-eye-close',
-        eyeClassPositionInside: false
+        eyeCloseClass: 'glyphicon-eye-close'
     };
 
     Password.prototype.init = function() {
@@ -80,11 +79,11 @@
         // Copy readonly attribute if it's set
         if (this.$element.prop('readonly'))
             this.$text.prop('readonly', true);
+
         this.$icon = $([
             '<span tabindex="100" title="' + this.options.message + '" class="add-on input-group-addon">',
             '<i class="icon-eye-open' + (this.options.white ? ' icon-white' : '') +
-                ' ' + this.options.eyeClass + ' ' + (this.options.eyeClassPositionInside ? '' : this.options.eyeOpenClass) + '">' +
-                (this.options.eyeClassPositionInside ? this.options.eyeOpenClass : '') + '</i>',
+                ' ' + this.options.eyeClass + ' ' + this.options.eyeOpenClass + '"></i>',
             '</span>'
         ].join(''))[placementFuc](this.$text).css('cursor', 'pointer');
 
@@ -111,16 +110,9 @@
         this.isShown = true;
         this.$element.hide();
         this.$text.show();
-        if (this.options.eyeClassPositionInside) {
-            this.$icon.find('i')
-                .removeClass('icon-eye-open')
-                .addClass('icon-eye-close')
-                .html(this.options.eyeCloseClass);
-        } else {
-            this.$icon.find('i')
-                .removeClass('icon-eye-open ' + this.options.eyeOpenClass)
-                .addClass('icon-eye-close ' + this.options.eyeCloseClass);
-        }
+        this.$icon.find('i')
+            .removeClass('icon-eye-open ' + this.options.eyeOpenClass)
+            .addClass('icon-eye-close ' + this.options.eyeCloseClass);
 
         // v3 input-group
         this.$text[this.options.placement](this.$element);
@@ -133,16 +125,9 @@
         this.isShown = false;
         this.$element.show();
         this.$text.hide();
-        if (this.options.eyeClassPositionInside) {
-            this.$icon.find('i')
-                .removeClass('icon-eye-close')
-                .addClass('icon-eye-open')
-                .html(this.options.eyeOpenClass);
-        } else {
-            this.$icon.find('i')
-                .removeClass('icon-eye-close ' + this.options.eyeCloseClass)
-                .addClass('icon-eye-open ' + this.options.eyeOpenClass);
-        }
+        this.$icon.find('i')
+            .removeClass('icon-eye-close ' + this.options.eyeCloseClass)
+            .addClass('icon-eye-open ' + this.options.eyeOpenClass);
 
         // v3 input-group
         this.$element[this.options.placement](this.$text);
@@ -157,10 +142,6 @@
         }
     };
 
-    Password.prototype.focus = function () {
-        this.$element.focus();
-    };
-
 
     // PASSWORD PLUGIN DEFINITION
     // =======================
@@ -172,9 +153,7 @@
             args = arguments,
 
             value,
-            allowedMethods = [
-                'show', 'hide', 'toggle', 'val', 'focus'
-            ]; // public function
+            allowedMethods = ['show', 'hide', 'toggle', 'val']; // public function
 
         this.each(function() {
             var $this = $(this),
