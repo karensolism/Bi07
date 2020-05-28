@@ -1,4 +1,4 @@
-@extends('master')
+@extends('vistasAdmin/master')
 
 @section('content')
 

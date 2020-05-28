@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DashSoloDesarrollos</title>
 
-    
+
 	<!-- ================== BEGIN BASE CSS STYLE ================== -->
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
 	<link href="{{ asset('assets/plugins/jquery-ui/jquery-ui.min.css') }}" rel="stylesheet" />
@@ -17,23 +17,23 @@
 	<link href="{{ asset('assets/css/admin/default/style-responsive.min.css') }}" rel="stylesheet" />
 	<link href="{{ asset('assets/css/admin/default/theme/default.css') }}" rel="stylesheet" id="theme" />
 	<!-- ================== END BASE CSS STYLE ================== -->
-	
+
 	<!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
 	<link href="{{ asset('assets/plugins/jquery-jvectormap/jquery-jvectormap.css') }}" rel="stylesheet" />
 	<link href="{{ asset('assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/plugins/gritter/css/jquery.gritter.css') }}" rel="stylesheet" />
-	
+
 	<!-- ================== END PAGE LEVEL STYLE ================== -->
-	
+
 	<!-- ================== BEGIN BASE JS ================== -->
-	<script src="{{ asset('assets/plugins/pace/pace.min.js') }}"></script> 
+	<script src="{{ asset('assets/plugins/pace/pace.min.js') }}"></script>
 	<!-- ================== END BASE JS ================== -->
 </head>
 <body>
     <!-- begin #page-loader -->
 	<div id="page-loader" class="fade show"><span class="spinner"></span></div>
 	<!-- end #page-loader -->
-	
+
 	<!-- begin #page-container -->
 	<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
 
@@ -49,7 +49,7 @@
 				</button>
 			</div>
 			<!-- end navbar-header -->
-			
+
 			<!-- begin header-nav -->
 			<ul class="navbar-nav navbar-right">
 				<li>
@@ -134,7 +134,7 @@
 				</li>
 				<li class="dropdown navbar-user">
 					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-						<img src="../assets/img/user/user-13.jpg" alt="" /> 
+						<img src="../assets/img/user/user-13.jpg" alt="" />
 						<span class="d-none d-md-inline">Adam Schwartz</span> <b class="caret"></b>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right">
@@ -150,7 +150,7 @@
 			<!-- end header navigation right -->
 		</div>
         <!-- end #header -->
-        
+
 	<!-- begin #sidebar -->
     <div id="sidebar" class="sidebar">
         <!-- begin sidebar scrollbar -->
@@ -197,7 +197,7 @@
                 <li class="has-sub">
                     <a href="javascript:;">
                         <!--<span class="badge pull-right">10</span>-->
-                        <i class="fa fa-hdd"></i> 
+                        <i class="fa fa-hdd"></i>
                         <span>Modulo Desarrolladoras</span>
                     </a>
                     <ul class="sub-menu">
@@ -211,12 +211,12 @@
                     <a href="javascript:;">
                         <b class="caret"></b>
                         <i class="fa fa-gem"></i>
-                        <span>Modulo Empresas </span> 
+                        <span>Modulo Empresas </span>
                     </a>
                     <ul class="sub-menu">
                         <li><a href="ui_general.html">Empresa</a></li>
                         <li><a href="ui_typography.html">Asesor</a></li>
-                        
+
                     </ul>
                 </li>
                 <!--li>
@@ -224,7 +224,7 @@
                         <div class="icon-img">
                             <img src="../assets/img/logo/logo-bs4.png" alt="" />
                         </div>
-                        <span>Bootstrap 4 <span class="label label-theme m-l-5">NEW</span></span> 
+                        <span>Bootstrap 4 <span class="label label-theme m-l-5">NEW</span></span>
                     </a>
                 </li>-->
                  <!--Modulo Direcion-->
@@ -232,13 +232,13 @@
                     <a href="javascript:;">
                         <b class="caret"></b>
                         <i class="fa fa-list-ol"></i>
-                        <span>Modulo Dirección </span> 
+                        <span>Modulo Dirección </span>
                     </a>
                     <ul class="sub-menu">
                         <li><a href="form_elements.html">Estado </a></li>
                         <li><a href="form_plugins.html">Ciudad </a></li>
                         <li><a href="form_slider_switcher.html">Colonia</a></li>
-                       
+
                     </ul>
                 </li>
                  <!--Modulo Extras-->
@@ -246,29 +246,29 @@
                     <a href="javascript:;">
                         <b class="caret"></b>
                         <i class="fa fa-list-ol"></i>
-                        <span>Modulo Extras </span> 
+                        <span>Modulo Extras </span>
                     </a>
                     <ul class="sub-menu">
                         <li><a href="form_elements.html">Tipo de precio </a></li>
                         <li><a href="form_plugins.html">Servicio </a></li>
                         <li><a href="form_slider_switcher.html">Forma de Pago</a></li>
-                       
+
                     </ul>
                 </li>
                  <!--Modulo Inmueble-->
                 <li class="has-sub">
                     <a href="javascript:;">
                         <b class="caret"></b>
-                        <i class="fa fa-star"></i> 
+                        <i class="fa fa-star"></i>
                         <span>Front End</span>
                     </a>
                     <ul class="sub-menu">
                         <li><a href="../../../frontend/template/template_one_page_parallax/index.html" target="_blank">Inmueble</a></li>
                         <li><a href="../../../frontend/template/template_blog/index.html" target="_blank">Galeria</a></li>
-    
+
                     </ul>
                 </li>
-              
+
                 <!-- begin sidebar minify button -->
                 <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
                 <!-- end sidebar minify button -->
@@ -289,9 +289,9 @@
     <!-- end Seccion para el contenido de la página  -->
 
     	<!-- ================== BEGIN BASE JS ================== -->
-	<script src="{{ asset('plugins/jquery/jquery-3.2.1.min.js') }}"></script> 
-	<script src="{{ asset('plugins/jquery-ui/jquery-ui.min.js') }}"></script>
-	<script src="{{ asset('plugins/bootstrap/4.0.0/js/bootstrap.bundle.min.js') }}"></script>
+	<script src="{{ asset('assets/plugins/jquery/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ asset('assets/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+	<script src="{{ asset('assets/plugins/bootstrap/4.0.0/js/bootstrap.bundle.min.js') }}"></script>
 	<!--[if lt IE 9]>
 		<script src="../assets/crossbrowserjs/html5shiv.js"></script>
 		<script src="../assets/crossbrowserjs/respond.min.js"></script>
@@ -302,11 +302,11 @@
 	<script src="{{ asset('assets/js/admin/theme/default.min.js') }}"></script>
 	<script src="{{ asset('assets/js/admin/apps.min.js') }}"></script>
 	<!-- ================== END BASE JS ================== -->
-	
+
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
 	<script src="{{ asset('assets/plugins/gritter/js/jquery.gritter.js') }}"></script>
 	<script src="{{ asset('assets/plugins/flot/jquery.flot.min.js') }}"></script>
-	<script src="{{ asset('assets/plugins/flot/jquery.flot.time.min.js') }}"></script> 
+	<script src="{{ asset('assets/plugins/flot/jquery.flot.time.min.js') }}"></script>
 	<script src="{{ asset('assets/plugins/flot/jquery.flot.resize.min.js') }}"></script>
 	<script src="{{ asset('assets/plugins/flot/jquery.flot.pie.min.js') }}"></script>
 	<script src="{{ asset('assets/plugins/sparkline/jquery.sparkline.js') }}"></script>
@@ -315,12 +315,12 @@
 	<script src="{{ asset('assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
 	<script src="{{ asset('assets/js/admin/demo/dashboard.min.js') }}"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
-	
-	<!--<script>
+
+	<script>
 		$(document).ready(function() {
 			App.init();
 			Dashboard.init();
 		});
-	</script>-->
+	</script>
 </body>
 </html>
