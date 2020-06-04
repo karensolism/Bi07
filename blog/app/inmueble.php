@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class asesor extends Model
+class inmueble extends Model
 {
     //
 }
