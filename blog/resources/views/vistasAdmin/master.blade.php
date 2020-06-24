@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>DashSoloDesarrollos</title>
-
-
-	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+    <!-- ================== BEGIN BASE CSS STYLE ================== -->
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
 	<link href="{{ asset('assets/plugins/jquery-ui/jquery-ui.min.css') }}" rel="stylesheet" />
 	<link href="{{ asset('assets/plugins/bootstrap/4.0.0/css/bootstrap.min.css') }}" rel="stylesheet" />
@@ -17,23 +14,32 @@
 	<link href="{{ asset('assets/css/admin/default/style-responsive.min.css') }}" rel="stylesheet" />
 	<link href="{{ asset('assets/css/admin/default/theme/default.css') }}" rel="stylesheet" id="theme" />
 	<!-- ================== END BASE CSS STYLE ================== -->
-
+	
 	<!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
 	<link href="{{ asset('assets/plugins/jquery-jvectormap/jquery-jvectormap.css') }}" rel="stylesheet" />
 	<link href="{{ asset('assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/plugins/gritter/css/jquery.gritter.css') }}" rel="stylesheet" />
-
+	
 	<!-- ================== END PAGE LEVEL STYLE ================== -->
-
+	
 	<!-- ================== BEGIN BASE JS ================== -->
-	<script src="{{ asset('assets/plugins/pace/pace.min.js') }}"></script>
-	<!-- ================== END BASE JS ================== -->
+	<script src="{{ asset('assets/plugins/pace/pace.min.js') }}"></script> 
+		<!-- ================== END BASE JS ================== -->
+
+<!-- ================== Referencias adicionales a la página maestra ================== -->
+	@yield('referencias')
+
+    <title>DashSoloDesarrollos</title>
+
+    
+	
+
 </head>
 <body>
     <!-- begin #page-loader -->
 	<div id="page-loader" class="fade show"><span class="spinner"></span></div>
 	<!-- end #page-loader -->
-
+	
 	<!-- begin #page-container -->
 	<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
 
@@ -49,7 +55,7 @@
 				</button>
 			</div>
 			<!-- end navbar-header -->
-
+			
 			<!-- begin header-nav -->
 			<ul class="navbar-nav navbar-right">
 				<li>
@@ -134,7 +140,7 @@
 				</li>
 				<li class="dropdown navbar-user">
 					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-						<img src="../assets/img/user/user-13.jpg" alt="" />
+						<img src="../assets/img/user/user-13.jpg" alt="" /> 
 						<span class="d-none d-md-inline">Adam Schwartz</span> <b class="caret"></b>
 					</a>
 					<div class="dropdown-menu dropdown-menu-right">
@@ -150,7 +156,7 @@
 			<!-- end header navigation right -->
 		</div>
         <!-- end #header -->
-
+        
 	<!-- begin #sidebar -->
     <div id="sidebar" class="sidebar">
         <!-- begin sidebar scrollbar -->
@@ -193,30 +199,30 @@
                         <li><a href="index_v2.html">Dashboard v2</a></li>
                     </ul>
                 </li>-->
-                <!--Modulo desarrolladoras-->
+                <!--Gestión de desarrolladoras-->
                 <li class="has-sub">
                     <a href="javascript:;">
                         <!--<span class="badge pull-right">10</span>-->
-                        <i class="fa fa-hdd"></i>
-                        <span>Modulo Desarrolladoras</span>
+                        <i class="fa fa-hdd"></i> 
+                        <span>Gestión de Desarrolladoras</span>
                     </a>
                     <ul class="sub-menu">
-                        <li><a href="email_inbox.html">Desarrolladora</a></li>
-                        <li><a href="email_compose.html">Tipo de inmueble</a></li>
-                        <li><a href="email_detail.html">Modelo</a></li>
+                        <li><a href="/desarrolladora">Desarrolladora</a></li>
+                        <li><a href="TipodeInmueble.blade.php">Tipo de inmueble</a></li>
+                        <li><a href="Modelo.blade.php">Modelo</a></li>
                     </ul>
                 </li>
-                <!--Modulo Empresa-->
+                <!--Gestión de Empresa-->
                 <li class="has-sub">
                     <a href="javascript:;">
                         <b class="caret"></b>
                         <i class="fa fa-gem"></i>
-                        <span>Modulo Empresas </span>
+                        <span>Gestión de Empresas </span> 
                     </a>
                     <ul class="sub-menu">
                         <li><a href="ui_general.html">Empresa</a></li>
                         <li><a href="ui_typography.html">Asesor</a></li>
-
+                        
                     </ul>
                 </li>
                 <!--li>
@@ -224,51 +230,51 @@
                         <div class="icon-img">
                             <img src="../assets/img/logo/logo-bs4.png" alt="" />
                         </div>
-                        <span>Bootstrap 4 <span class="label label-theme m-l-5">NEW</span></span>
+                        <span>Bootstrap 4 <span class="label label-theme m-l-5">NEW</span></span> 
                     </a>
                 </li>-->
-                 <!--Modulo Direcion-->
+                 <!--Gestión de Direcion-->
                 <li class="has-sub">
                     <a href="javascript:;">
                         <b class="caret"></b>
                         <i class="fa fa-list-ol"></i>
-                        <span>Modulo Dirección </span>
+                        <span>Gestión de Dirección </span> 
                     </a>
                     <ul class="sub-menu">
                         <li><a href="form_elements.html">Estado </a></li>
                         <li><a href="form_plugins.html">Ciudad </a></li>
                         <li><a href="form_slider_switcher.html">Colonia</a></li>
-
+                       
                     </ul>
                 </li>
-                 <!--Modulo Extras-->
+                 <!--Gestión de Extras-->
                 <li class="has-sub">
                     <a href="javascript:;">
                         <b class="caret"></b>
                         <i class="fa fa-list-ol"></i>
-                        <span>Modulo Extras </span>
+                        <span>Gestión de Extras </span> 
                     </a>
                     <ul class="sub-menu">
                         <li><a href="form_elements.html">Tipo de precio </a></li>
                         <li><a href="form_plugins.html">Servicio </a></li>
                         <li><a href="form_slider_switcher.html">Forma de Pago</a></li>
-
+                       
                     </ul>
                 </li>
-                 <!--Modulo Inmueble-->
+                 <!--Gestión de Inmueble-->
                 <li class="has-sub">
                     <a href="javascript:;">
                         <b class="caret"></b>
-                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i> 
                         <span>Front End</span>
                     </a>
                     <ul class="sub-menu">
-                        <li><a href="../../../frontend/template/template_one_page_parallax/index.html" target="_blank">Inmueble</a></li>
-                        <li><a href="../../../frontend/template/template_blog/index.html" target="_blank">Galeria</a></li>
-
+                        <li><a href="" target="_blank">Inmueble</a></li>
+                        <li><a href="" target="_blank">Galeria</a></li>
+    
                     </ul>
                 </li>
-
+              
                 <!-- begin sidebar minify button -->
                 <li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
                 <!-- end sidebar minify button -->
@@ -282,14 +288,23 @@
     </div>
     <!-- end page container -->
 
- <!-- begin Seccion para el contenido de la página  -->
-    <div class="container">
+ <!-- Comienzo  de la Seccion para el contenido de la página 
+Se "imprime"  lo que se quiere mostrar en un div container 
+  -->
+
+ 	  <div  class="container">
       @yield('content')
     </div>
-    <!-- end Seccion para el contenido de la página  -->
+
+
+  
+    <!-- fin Seccion para el contenido de la página  -->
+
+    <!-- Scrip adicionales a la página maestra-->
+      @yield('script')
 
     	<!-- ================== BEGIN BASE JS ================== -->
-	<script src="{{ asset('assets/plugins/jquery/jquery-3.2.1.min.js') }}"></script>
+	<script src="{{ asset('assets/plugins/jquery/jquery-3.2.1.min.js') }}"></script> 
 	<script src="{{ asset('assets/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
 	<script src="{{ asset('assets/plugins/bootstrap/4.0.0/js/bootstrap.bundle.min.js') }}"></script>
 	<!--[if lt IE 9]>
@@ -302,11 +317,11 @@
 	<script src="{{ asset('assets/js/admin/theme/default.min.js') }}"></script>
 	<script src="{{ asset('assets/js/admin/apps.min.js') }}"></script>
 	<!-- ================== END BASE JS ================== -->
-
+	
 	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
 	<script src="{{ asset('assets/plugins/gritter/js/jquery.gritter.js') }}"></script>
 	<script src="{{ asset('assets/plugins/flot/jquery.flot.min.js') }}"></script>
-	<script src="{{ asset('assets/plugins/flot/jquery.flot.time.min.js') }}"></script>
+	<script src="{{ asset('assets/plugins/flot/jquery.flot.time.min.js') }}"></script> 
 	<script src="{{ asset('assets/plugins/flot/jquery.flot.resize.min.js') }}"></script>
 	<script src="{{ asset('assets/plugins/flot/jquery.flot.pie.min.js') }}"></script>
 	<script src="{{ asset('assets/plugins/sparkline/jquery.sparkline.js') }}"></script>
@@ -315,7 +330,7 @@
 	<script src="{{ asset('assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
 	<script src="{{ asset('assets/js/admin/demo/dashboard.min.js') }}"></script>
 	<!-- ================== END PAGE LEVEL JS ================== -->
-
+	
 	<script>
 		$(document).ready(function() {
 			App.init();

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class prueba extends Controller
+class PruebaController extends Controller
 {
         /**
      * Create a new controller instance.
@@ -23,9 +23,9 @@ class prueba extends Controller
      */
    
 
-    public function prueba()
+    public function Prueba2()
     {
-       return view('vistasAdmin/prueba');
+       return view('vistasAdmin/prueba2');
       
     }
 }
