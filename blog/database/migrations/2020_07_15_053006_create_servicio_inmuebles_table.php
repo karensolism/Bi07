@@ -31,6 +31,7 @@ class CreateServicioInmueblesTable extends Migration
         Schema::create('asesors', function (Blueprint $table) {
             $table->id('Id_asesor');
             $table->integer('Activo');
+            $table->string('Correo_asesor',100);
             $table->string('Contrasenia',20);
             $table->string('Nombre',15);
             $table->string('Apellido',50);
@@ -79,7 +80,6 @@ class CreateServicioInmueblesTable extends Migration
             $table->string('Tel_desa',15);
             $table->string('Correo',100);
             $table->string('Logo',100);
-            $table->string('Telefono',15);
             $table->string('Nombre_desa',100);
                 
 
@@ -88,6 +88,7 @@ class CreateServicioInmueblesTable extends Migration
         Schema::create('tipo_inmbuebles', function (Blueprint $table) {
             $table->id('Id_tipo');
             $table->integer('Activo');
+            $table->string('Tipo_inmueble',100);
            
              $table->unsignedBigInteger('Id_desarrolladorafk'); // Relación con desarrolladoras
             $table->foreign('Id_desarrolladorafk')->references('Id_desarrolladora')->on('desarrolladoras'); // clave foranea
@@ -120,6 +121,7 @@ class CreateServicioInmueblesTable extends Migration
         Schema::create('caracteristicas', function (Blueprint $table) {
            $table->id('id_producto');
             $table->integer('Activo');
+            $table->string('Producto',10);
              $table->unsignedBigInteger('id_seminuevofk'); // Relación con seminuevos
             $table->foreign('id_seminuevofk')->references('id_seminuevo')->on('seminuevos'); // clave foranea
           
@@ -259,3 +261,4 @@ $table->unsignedBigInteger('id_productofk'); // Relación con tipoprecios
           Schema::dropIfExists('empresas');
     }
 }
+
