@@ -14,7 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('vistasAdmin.prueba');
+});
+
+Route::get('/', function () {
+    return view('vistasAdmin.Modelo');
+});
+
+Route::get('/', function () {
+    return view('vistasAdmin.master');
+});
+Route::get('/', function () {
+    return view('vistasAdmin.prueba2');
 });
 
 /*return views('vistasAdmin.master');*/
@@ -24,3 +35,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/prueba', 'prueba@prueba')->name('prueba');
+Route::get('/modelo','ModeloController@Modelo')->name('modelo');
+Route::post('/store','ModeloController@store')->name('modelo');
+Route::get('/master','MasterController@Master')->name('Master');
+Route::get('/desarrolladora','DesarrolladoraController@Desarrolladora')->name('Desarrolladora');
+Route::get('/prueba2','PruebaController@Prueba2')->name('prueba2');
+Route::get('/galeria','GaleriaController@Galeria')->name('Galeria');
+
+//Route::resource('Modelo','ModeloController');
