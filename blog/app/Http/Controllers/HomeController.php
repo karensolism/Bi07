@@ -30,5 +30,5 @@ class HomeController extends Controller
        //return view('vistasAdmin/Desarrolladora');
       
     }
-}
+
 }

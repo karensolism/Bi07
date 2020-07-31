@@ -10,7 +10,7 @@
 
 @section('content')
 
-<form action="" method="POST" enctype="multipart/form-data">
+<form action="{{route('Servicio.store')}}" method="POST" enctype="multipart/form-data">
 
         <!--comienzo del cuadro -->
       <div class="row">
@@ -35,14 +35,14 @@
      <h5 class="card-title">Catálogo Servicio </h5>
 
          <!--En este lo puse no visible porque el usuario no debe ser capaz de interactuar con las llaves primarias-->
-       <input type="hidden" id="txt_IdServicio" name="Servicio" value="" >
+       <input type="hidden" id="txt_IdServicio" name="Id_servicio" value="" >
        <!--id no visible-->
        <br/>
        <!--estado activo/inactivo-->
        <label for="activo" class="label-text">Activo</label>
        <br/>
        <!--No estoy muy segura de como va a funcionar el campo de activo, por lo tanto lo deje como un input de texto hasta saber-->
-       <select id="activoTipoPrecio" name="activo">
+       <select id="activoTipoPrecio" name="Activo">
          <option value="1">si</option>
          <option value="0">no</option>
        </select>       <br/>

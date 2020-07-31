@@ -10,7 +10,8 @@
 
 @section('content')
 
-<form action="" method="POST" enctype="multipart/form-data">
+<form action="{{route('Desarrolladora.store')}}" method="POST" enctype="multipart/form-data">
+{{csrf_field()}}
 
         <!--comienzo del cuadro -->
       <div class="row">
@@ -35,14 +36,14 @@
      <h5 class="card-title">Catálogo Desarrolladora </h5>
 
         <!--En este lo puse no visible porque el usuario no debe ser capaz de interactuar con las llaves primarias-->
-       <input type="hidden" id="txt_IdDesa" name="Desarrolladora" value="" >
+       <input type="hidden" id="txt_IdDesa" name="Id_desarrolladora" value="" >
        <!--id no visible-->
        <br/>
        <!--estado activo/inactivo-->
        <label for="activo" class="label-text">Activo</label>
        <br/>
        <!--No estoy muy segura de como va a funcionar el campo de activo, por lo tanto lo deje como un input de texto hasta saber-->
-       <select id="activoTipoPrecio" name="activo">
+       <select id="activoTipoPrecio" name="Activo">
          <option value="1">si</option>
          <option value="0">no</option>
        </select>
@@ -50,12 +51,12 @@
        <!--Teléfono-->
        <label for="telefono" class="label-text">Telefono</label>
        <br/>
-       <input type="text" id="txt_telefonoDesa" name="Teléfono" class="text">
+       <input type="text" id="txt_telefonoDesa" name="Tel_desa" class="text">
        <br/>
        <!--correo-->
        <label for="correo" class="label-text">Correo</label>
        <br/>
-       <input type="text" id="txt_correoDesa" name="Correo" class="text">
+       <input type="email" id="txt_correoDesa" name="Correo" class="text">
        <br/>
        <!--Logo-->
        <label for="logo"class="label-text">Logo</label>
@@ -65,7 +66,7 @@
        <!--Nombre-->
        <label for="nombre" class="label-text">Nombre</label>
        <br/>
-       <input type="text" id="txt_nombreDesa" name="Nombre" class="text">
+       <input type="text" id="txt_nombreDesa" name="Nombre_desa" class="text">
        <br/>
               <button class="button float-right">Enviar</button>
                            

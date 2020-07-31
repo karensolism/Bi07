@@ -10,7 +10,7 @@
 
 @section('content')
 
-   <form action="{{url('/store')}}" method="POST" enctype="multipart/form-data">
+   <form action="{{route('Modelo.store')}}" method="POST" enctype="multipart/form-data">
 {{csrf_field()}}
         <!--comienzo del cuadro -->
       <div class="row">
@@ -35,23 +35,29 @@
      <h5 class="card-title">Catálogo Modelo</h5>
 
               <!--En este lo puse no visible porque el usuario no debe ser capaz de interactuar con las llaves primarias-->
-       <input type="hidden" id="txt_IdModelo" name="Modelo" value="" >
+       <input type="hidden" id="txt_IdModelo" name="Id_modelo" value="{{$datosModelo->Id_modelo}}" >
        <!--id no visible-->
        <br/>
        <!--estado activo/inactivo-->
        <label for="activo" class="label-text">Activo</label>
        <br/>
        <!--No estoy muy segura de como va a funcionar el campo de activo, por lo tanto lo deje como un input de texto hasta saber-->
-     <select id="activoTipoPrecio" name="activo">
-         <option value="1">si</option>
+     <select id="activoModelo" name="Activo"  value="{{$datosModelo->Activo}}">
+         <option value="1" class="list">si</option>
          <option value="0">no</option>
        </select>
        <br/>
        <!--Modelo-->
        <label for="modelo" class="label-text">Modelo</label>
        <br/>
-       <input type="text" id="txt_modelo" name="Modelo" class="text">
+       <input type="text" id="txt_modelo" name="Modelo" class="text" value="{{$datosModelo->Modelo}}">
        <br/> 
+       <!--Mostrara los tipos de inmueble que existen -->
+       <select id="id_tipoInmueble" name="Id_tipofk" value="{{$datosModelo->Id_tipofk}}">
+       <!-- @foreach($tipoInmuebles as $tipo)
+         <option value="{{$tipo->Id_tipo}}">{{$tipo->Tipo_inmueble}}</option>
+         @endforeach-->
+       </select>
        <br/>
        <button class="button float-right">Enviar</button>
                            

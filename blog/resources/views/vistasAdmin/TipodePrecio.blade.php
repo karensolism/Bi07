@@ -10,8 +10,8 @@
 
 @section('content')
 
-<form action="" method="POST" enctype="multipart/form-data">
-
+<form action="{{route('tipoPrecio.store')}}" method="POST" enctype="multipart/form-data">
+{{csrf_field()}}
         <!--comienzo del cuadro -->
       <div class="row">
           <!-- begin col-12 -->
@@ -35,14 +35,14 @@
      <h5 class="card-title">Catálogo Tipo de precio</h5>
 
           <!--En este lo puse no visible porque el usuario no debe ser capaz de interactuar con las llaves primarias-->
-       <input type="hidden" id="txt_IdtipoPrecio" name="Tipo de Precio" value="" >
+       <input type="hidden" id="txt_IdtipoPrecio" name="id_tipoPrecio" value="" >
        <!--id no visible-->
        <br/>
        <!--estado activo/inactivo-->
        <label for="activo" class="label-text">Activo</label>
        <br/>
        <!--No estoy muy segura de como va a funcionar el campo de activo, por lo tanto lo deje como un input de texto hasta saber-->
-       <select id="activoTipoPrecio" name="activo">
+       <select id="activoTipoPrecio" name="Activo">
          <option value="1">si</option>
          <option value="0">no</option>
        </select>
@@ -50,7 +50,7 @@
        <!--Tipo de precio-->
        <label for="tipoPrecio" class="label-text">Tipo de precio</label>
        <br/>
-       <input type="text" id="txt_tipoPrecio" name="tipoPrecio" class="text">
+       <input type="text" id="txt_tipoPrecio" name="Tipo" class="text">
        <br/> 
        <button class="button float-right">Enviar</button>
                            

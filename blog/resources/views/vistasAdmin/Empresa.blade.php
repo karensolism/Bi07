@@ -10,8 +10,8 @@
 
 @section('content')
 
-<form action="" method="POST" enctype="multipart/form-data">
-
+<form action="{{route('Empresa.store')}}" method="POST" enctype="multipart/form-data">
+{{csrf_field()}}
         <!--comienzo del cuadro -->
       <div class="row">
           <!-- begin col-12 -->
@@ -35,14 +35,14 @@
      <h5 class="card-title">Catálogo Empresa </h5>
 
          <!--En este lo puse no visible porque el usuario no debe ser capaz de interactuar con las llaves primarias-->
-       <input type="hidden" id="txt_IdEmpresa" name="Empresa" value="" >
+       <input type="hidden" id="txt_IdEmpresa" name="Id_empresa" value="" >
        <!--id no visible-->
        <br/>
        <!--estado activo/inactivo-->
        <label for="activo" class="label-text">Activo</label>
        <br/>
        <!--No estoy muy segura de como va a funcionar el campo de activo, por lo tanto lo deje como un input de texto hasta saber-->
-      <select id="activoTipoPrecio" name="activo">
+      <select id="activoTipoPrecio" name="Activo">
          <option value="1">si</option>
          <option value="0">no</option>
        </select>
@@ -50,22 +50,22 @@
        <!--Teléfono-->
        <label for="telefono" class="label-text">Telefono</label>
        <br/>
-       <input type="text" id="txt_telefonoEmpresa" name="Teléfono" class="text">
+       <input type="text" id="txt_telefonoEmpresa" name="Tel_empresa" class="text">
        <br/>
        <!--correo-->
        <label for="correo" class="label-text">Correo</label>
        <br/>
-       <input type="text" id="txt_correoEmpresa" name="Correo" class="text">
+       <input type="text" id="txt_correoEmpresa" name="Correo_empr" class="text">
        <br/>
        <!--Logo-->
        <label for="logo"class="label-text">Logo</label>
        <br/>
-       <input type="file" id="txt_logoEmpresa" name="Logo" class="file">
+       <input type="file" id="txt_logoEmpresa" name="Logo_emp" class="file">
        <br/>
        <!--Nombre-->
        <label for="nombre" class="label-text">Nombre</label>
        <br/>
-       <input type="text" id="txt_nombreEmpresa" name="Nombre" class="text">
+       <input type="text" id="txt_nombreEmpresa" name="Nombre_empr" class="text">
        <br/>
          <button class="button float-right">Enviar</button>
 

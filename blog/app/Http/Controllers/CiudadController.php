@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class DesarrolladoraController extends Controller
+class CiudadController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -23,7 +23,7 @@ class DesarrolladoraController extends Controller
      */
     public function create()
     {
-        return view('vistasAdmin/Desarrolladora');
+        return view('vistasAdmin/Ciudad');
     }
 
     /**
@@ -34,8 +34,8 @@ class DesarrolladoraController extends Controller
      */
     public function store(Request $request)
     {
-         $datosDesarrolladora=request()->all();
-        return response()->json($datosDesarrolladora);
+         $datosCiudad=request()->all();
+        return response()->json($datosCiudad);
     }
 
     /**

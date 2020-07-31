@@ -10,11 +10,11 @@
 
 @section('content')
 
-<form action="{{route('Asesor.store')}}" method="POST" enctype="multipart/form-data">
+   <form action="{{route('Inmueble.store')}}" method="POST" enctype="multipart/form-data">
 {{csrf_field()}}
         <!--comienzo del cuadro -->
       <div class="row">
-          <!-- begin col-12 -->
+          <!-- begin col-6 -->
           <div class="col-lg-12" >
               <!-- begin panel -->
                     <div class="panel panel-inverse" data-sortable-id="table-basic-1">
@@ -26,61 +26,34 @@
                                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
                                 <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
                             </div>
-                            <h4 class="panel-title">Asesor</h4>
+                            <h4 class="panel-title">Inmueble</h4>
                         </div>
                         <!-- end panel-heading -->
                         <!-- begin panel-body -->
                         <div class="panel-body">
                    
-     <h5 class="card-title">Catálogo Asesor</h5>
+     <h5 class="card-title">Catálogo Inmueble</h5>
 
-             <!--En este lo puse no visible porque el usuario no debe ser capaz de interactuar con las llaves primarias-->
-       <input type="hidden" id="txt_IdAsesor" name="Id_asesor" value="" >
+              <!--En este lo puse no visible porque el usuario no debe ser capaz de interactuar con las llaves primarias-->
+       <input type="hidden" id="txt_IdInmueble" name="Inmueble" value="" >
        <!--id no visible-->
        <br/>
        <!--estado activo/inactivo-->
        <label for="activo" class="label-text">Activo</label>
        <br/>
        <!--No estoy muy segura de como va a funcionar el campo de activo, por lo tanto lo deje como un input de texto hasta saber-->
-      <select id="activoAsesor" name="Activo">
+     <select id="activoInmueble" name="activo">
          <option value="1">si</option>
          <option value="0">no</option>
        </select>
        <br/>
-       <!--correo-->
-       <label for="correo" class="label-text">Correo</label>
+       <!--Inmueble-->
+       <label for="Inmueble" class="label-text">Inmueble</label>
        <br/>
-       <input type="text" id="txt_correoDesa" name="Correo" class="text">
+       <input type="text" id="txt_Inmueble" name="Inmueble" class="text">
+       <br/> 
        <br/>
-       <!--Contrasenia-->
-       <label for="contrasenia" class="label-text">Contraseña</label>
-       <br/>
-       <input type="text" id="txt_contrasenia" name="Contrasenia" class="text">
-       <br/>
-       <!--Nombre-->
-       <label for="nombre" class="label-text">Nombre</label>
-       <br/>
-       <input type="text" id="txt_nombreAsesor" name="Nombre" class="text">
-       <br/>
-       <!--Apellido-->
-       <label for="apellido" class="label-text">Apellido</label>
-       <br/>
-       <input type="text" id="txt_apellidoAsesor" name="Apellido" class="text">
-       <br/>
-       <!--Teléfono-->
-       <label for="telefono" class="label-text">Telefono</label>
-       <br/>
-       <input type="text" id="txt_telefonoAsesor" name="Telefono" class="text">
-       <br/>
-         <input type="hidden" id="txt_IdUsuario" name="Id_Usuariofk" value="" >
-        <!--Se muestra las empresas registradas -->
-       <select id="id_Empresa" name="Id_empresafk">
-         <option value="1">si</option>
-         <option value="0">no</option>
-       </select>
-       <br/>         
-
-        <button class="button float-right">Enviar</button>
+       <button class="button float-right">Enviar</button>
                            
 
                         </div>
@@ -108,7 +81,11 @@
  <script src="{{ asset('assets/js/admin/bootstrap.min.js') }}"></script> 
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js" type="text/javascript"></script>
 
+  <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+    <script src="{{ asset('assets/plugins/dropzone/min/dropzone.min.js') }}"></script>
+  <script src="{{ asset('assets/plugins/highlight/highlight.common.js') }}"></script>
+  <script src="{{ asset('assets/js/admin/demo/render.highlight.js') }}"></script>
+  <!-- ================== END PAGE LEVEL JS ================== -->
  
-
 
 @endsection

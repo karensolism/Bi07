@@ -209,7 +209,7 @@
                     <ul class="sub-menu">
                         <li><a href="/desarrolladora">Desarrolladora</a></li>
                         <li><a href="TipodeInmueble.blade.php">Tipo de inmueble</a></li>
-                        <li><a href="Modelo.blade.php">Modelo</a></li>
+                        <li><a href="Modelo">Modelo</a></li>
                     </ul>
                 </li>
                 <!--Gestión de Empresa-->

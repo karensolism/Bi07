@@ -1,46 +1,95 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use DB;
+ 
 use Illuminate\Http\Request;
+use App\Modelo;
+use App\TipoInmueble;
 
 class ModeloController extends Controller
 {
-        /**
-     * Create a new controller instance.
+    /**
+     * Display a listing of the resource.
      *
-     * @return void
+     * @return \Illuminate\Http\Response
      */
-    public function __construct()
+
+    public function index()
     {
-        //$this->middleware('auth');
+         $Modelo ['modelos']=Modelo::paginate(5);
+        return view('vistasAdmin/TablaModelo',$Modelo);
     }
 
     /**
-     * Show the application dashboard.
+     * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return \Illuminate\Http\Response
      */
-   
-
-    public function Modelo()
+    public function create()
     {
-       return view('vistasAdmin/Modelo');
-      
+       $TipoInmuebles ['tipoInmuebles']=TipoInmueble::paginate(5);
+        return view('vistasAdmin/Modelo',$TipoInmuebles);
+        
     }
 
-     public function Create()
-    {
-       //
-      
-    }
-
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
-        //$datosdeModelo=request()->all();
-        $datosdeModelo=request()->except('_token');
-        store::insert($datosdeModelo);
-        return response()-> json($datosdeModelo);
+        $datosModelo=request()->except('_token');
+        Modelo::insert($datosModelo);
+        return response()->json($datosModelo);
     }
 
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($Id_modelo)
+    {
+        $datosModelo = Modelo::findOrFail($Id_modelo);
+        return view('vistasAdmin.Modelo', compact('datosModelo'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($Id_modelo)
+    {
+        Modelo::destroy($Id_modelo);
+           return view('vistasAdmin/TablaModelo');
+    }
 }

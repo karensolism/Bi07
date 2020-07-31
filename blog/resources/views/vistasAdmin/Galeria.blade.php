@@ -13,8 +13,8 @@
 
 @section('content')
 
-<form action="" method="POST" enctype="multipart/form-data">
-
+<form action="{{route('Galeria.store')}}" method="POST" enctype="multipart/form-data">
+{{csrf_field()}}
          <div class="col-md-12">
                     <!-- begin panel -->
                     <div class="panel panel-inverse" data-sortable-id="form-dropzone-1">
