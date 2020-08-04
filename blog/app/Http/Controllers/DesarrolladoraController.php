@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Desarrolladora;
 class DesarrolladoraController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class DesarrolladoraController extends Controller
      */
     public function index()
     {
-        //
+        $Desarrolladora ['desarrolladoras']=Desarrolladora::paginate(5);
+        return view('vistasAdmin/TablaDesarrolladora',$Desarrolladora);
     }
 
     /**
@@ -34,8 +35,9 @@ class DesarrolladoraController extends Controller
      */
     public function store(Request $request)
     {
-         $datosDesarrolladora=request()->all();
-        return response()->json($datosDesarrolladora);
+          $datosDesa=request()->except('_token');
+        Desarrolladora::insert($datosDesa);
+        return response()->json($datosDesa);
     }
 
     /**
@@ -55,9 +57,10 @@ class DesarrolladoraController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($Id_desarrolladora)
     {
-        //
+          $datosDesa = Desarrolladora::findOrFail($Id_desarrolladora);
+        return view('vistasAdmin.Desarrolladora', compact('datosDesa'));
     }
 
     /**
@@ -78,8 +81,9 @@ class DesarrolladoraController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($Id_desarrolladora)
     {
-        //
+        Desarrolladora::destroy($Id_desarrolladora);
+           return view('vistasAdmin/TablaDesarrolladora');
     }
 }

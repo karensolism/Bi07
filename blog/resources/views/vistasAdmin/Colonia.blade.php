@@ -35,14 +35,14 @@
      <h5 class="card-title">Catálogo Colonia </h5>
 
         <!--En este lo puse no visible porque el usuario no debe ser capaz de interactuar con las llaves primarias-->
-       <input type="hidden" id="Id_Colonia" name="Id_colonia" value="" >
+       <input type="hidden" id="Id_Colonia" name="Id_Colonia" value="" >
        <!--id no visible-->
        <br/>
        <!--estado activo/inactivo-->
        <label for="activo" class="label-text">Activo</label>
        <br/>
        <!--No estoy muy segura de como va a funcionar el campo de activo, por lo tanto lo deje como un input de texto hasta saber-->
-      <select id="activoTipoPrecio" name="Activo">
+      <select id="activoColonia" name="Activo">
          <option value="1">si</option>
          <option value="0">no</option>
        </select>

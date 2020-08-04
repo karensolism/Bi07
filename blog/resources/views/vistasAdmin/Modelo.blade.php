@@ -35,14 +35,14 @@
      <h5 class="card-title">Catálogo Modelo</h5>
 
               <!--En este lo puse no visible porque el usuario no debe ser capaz de interactuar con las llaves primarias-->
-       <input type="hidden" id="txt_IdModelo" name="Id_modelo" value="{{$datosModelo->Id_modelo}}" >
+       <input type="hidden" id="txt_IdModelo" name="Id_modelo" value="" >
        <!--id no visible-->
        <br/>
        <!--estado activo/inactivo-->
        <label for="activo" class="label-text">Activo</label>
        <br/>
        <!--No estoy muy segura de como va a funcionar el campo de activo, por lo tanto lo deje como un input de texto hasta saber-->
-     <select id="activoModelo" name="Activo"  value="{{$datosModelo->Activo}}">
+     <select id="activoModelo" name="Activo"  value="">
          <option value="1" class="list">si</option>
          <option value="0">no</option>
        </select>
@@ -50,7 +50,7 @@
        <!--Modelo-->
        <label for="modelo" class="label-text">Modelo</label>
        <br/>
-       <input type="text" id="txt_modelo" name="Modelo" class="text" value="{{$datosModelo->Modelo}}">
+       <input type="text" id="txt_modelo" name="Modelo" class="text" value="">
        <br/> 
        <!--Mostrara los tipos de inmueble que existen -->
        <select id="id_tipoInmueble" name="Id_tipofk" value="{{$datosModelo->Id_tipofk}}">

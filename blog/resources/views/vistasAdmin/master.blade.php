@@ -207,7 +207,7 @@
                         <span>Gestión de Desarrolladoras</span>
                     </a>
                     <ul class="sub-menu">
-                        <li><a href="/desarrolladora">Desarrolladora</a></li>
+                        <li><a href="Desarrolladora">Desarrolladora</a></li>
                         <li><a href="TipodeInmueble.blade.php">Tipo de inmueble</a></li>
                         <li><a href="Modelo">Modelo</a></li>
                     </ul>
@@ -220,7 +220,7 @@
                         <span>Gestión de Empresas </span> 
                     </a>
                     <ul class="sub-menu">
-                        <li><a href="ui_general.html">Empresa</a></li>
+                        <li><a href="Empresa">Empresa</a></li>
                         <li><a href="ui_typography.html">Asesor</a></li>
                         
                     </ul>
@@ -241,9 +241,9 @@
                         <span>Gestión de Dirección </span> 
                     </a>
                     <ul class="sub-menu">
-                        <li><a href="form_elements.html">Estado </a></li>
-                        <li><a href="form_plugins.html">Ciudad </a></li>
-                        <li><a href="form_slider_switcher.html">Colonia</a></li>
+                        <li><a href="Estado">Estado </a></li>
+                        <li><a href="Ciudad">Ciudad </a></li>
+                        <li><a href="Colonia">Colonia</a></li>
                        
                     </ul>
                 </li>

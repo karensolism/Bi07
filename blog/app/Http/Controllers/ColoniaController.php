@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Colonia;
+use App\Ciudad;
+use App\Estado;
 
 class ColoniaController extends Controller
 {
@@ -13,7 +16,8 @@ class ColoniaController extends Controller
      */
     public function index()
     {
-        //
+        $Colonia ['colonias']=Colonia::paginate(5);
+        return view('vistasAdmin/TablaColonia',$Colonia);
     }
 
     /**
@@ -23,7 +27,8 @@ class ColoniaController extends Controller
      */
     public function create()
     {
-        return view('vistasAdmin/Colonia');
+        $Ciudad ['ciudads']=Ciudad::paginate(5);
+        return view('vistasAdmin/Colonia',$Ciudad);
     }
 
     /**
@@ -34,8 +39,8 @@ class ColoniaController extends Controller
      */
     public function store(Request $request)
     {
-         $datosColonia=request()->all();
-        return response()->json($datosColonia);
+         $datosColonia==request()->except('_token');      
+        return response()->json($datosCiudad);
     }
 
     /**
@@ -55,9 +60,10 @@ class ColoniaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($Id_colonia)
     {
-        //
+         $datosColonia = Colonia::findOrFail($Id_colonia);
+        return view('vistasAdmin.Colonia', compact('datosColonia'));
     }
 
     /**
@@ -78,8 +84,9 @@ class ColoniaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($Id_colonia)
     {
-        //
+        Colonia::destroy($Id_colonia);
+           return view('vistasAdmin/Colonia');
     }
 }

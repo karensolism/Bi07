@@ -60,7 +60,8 @@
        <!--Logo-->
        <label for="logo"class="label-text">Logo</label>
        <br/>
-       <input type="file" id="txt_logoEmpresa" name="Logo_emp" class="file">
+       <!--input type="file" id="txt_logoEmpresa" name="Logo_emp" class="file"-->
+       <input type="text" id="txt_logoEmpresa" name="Logo_emp" class="text">
        <br/>
        <!--Nombre-->
        <label for="nombre" class="label-text">Nombre</label>

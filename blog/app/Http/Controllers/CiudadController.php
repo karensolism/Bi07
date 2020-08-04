@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Ciudad;
+use App\Estado;
+
 
 class CiudadController extends Controller
 {
@@ -13,7 +16,8 @@ class CiudadController extends Controller
      */
     public function index()
     {
-        //
+        $Ciudad ['ciudads']=Ciudad::paginate(5);
+        return view('vistasAdmin/TablaCiudad',$Ciudad);
     }
 
     /**
@@ -23,7 +27,11 @@ class CiudadController extends Controller
      */
     public function create()
     {
-        return view('vistasAdmin/Ciudad');
+         
+
+          $Estado ['estados']=Estado::paginate(5);
+        return view('vistasAdmin/Ciudad',$Estado);
+        
     }
 
     /**
@@ -34,7 +42,8 @@ class CiudadController extends Controller
      */
     public function store(Request $request)
     {
-         $datosCiudad=request()->all();
+         $datosCiudad=request()->except('_token');
+        Ciudad::insert($datosCiudad);
         return response()->json($datosCiudad);
     }
 
@@ -55,9 +64,10 @@ class CiudadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id_ciudad)
     {
-        //
+        $datosCiudad = Ciudad::findOrFail($id_ciudad);
+        return view('vistasAdmin.Ciudad', compact('datosCiudad'));
     }
 
     /**
@@ -78,8 +88,9 @@ class CiudadController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id_ciudad)
     {
-        //
+        Ciudad::destroy($id_ciudad);
+           return view('vistasAdmin/Ciudad');
     }
 }

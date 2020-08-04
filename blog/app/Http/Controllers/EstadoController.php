@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Estado;
 
 class EstadoController extends Controller
 {
@@ -13,7 +14,8 @@ class EstadoController extends Controller
      */
     public function index()
     {
-        //
+        $Estado ['estados']=Estado::paginate(5);
+        return view('vistasAdmin/TablaEstado',$Estado);
     }
 
     /**
@@ -34,8 +36,12 @@ class EstadoController extends Controller
      */
     public function store(Request $request)
     {
-         $datosEstado=request()->all();
-        return response()->json($datosEstado);    }
+          
+    $datosEstado=request()->except('_token');
+        Estado::insert($datosEstado);
+        return response()->json($datosEstado);
+
+    }
 
     /**
      * Display the specified resource.
@@ -54,9 +60,10 @@ class EstadoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($Id_estado)
     {
-        //
+        $datosEstado = Estado::findOrFail($Id_estado);
+        return view('vistasAdmin.Estado', compact('datosEstado'));
     }
 
     /**
@@ -77,8 +84,9 @@ class EstadoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($Id_estado)
     {
-        //
+        Estado::destroy($Id_estado);
+           return view('vistasAdmin/TablaEstado');
     }
 }
