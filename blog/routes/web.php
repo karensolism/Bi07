@@ -43,5 +43,7 @@ Route::resource('Colonia','ColoniaController');
 Route::resource('Asesor','AsesorController');
 Route::resource('Desarrolladora','DesarrolladoraController');
 Route::resource('Empresa','EmpresaController');
+
 Route::resource('Servicio','ServicioController');
 Route::resource('Galeria','GaleriaController');
+
