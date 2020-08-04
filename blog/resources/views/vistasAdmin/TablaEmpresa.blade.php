@@ -53,7 +53,7 @@
                                    <form action="{{route('Empresa.destroy',$empresa->Id_empresa)}}" method="POST" >
                                         {{csrf_field()}}
                                         {{method_field('Delete')}} 
-                                    
+                                    <br>  
                                     <button type="submit" onclick="return confirm('¿BORRAR?')">Borar</button>
                                     </form>
                                 </td>
