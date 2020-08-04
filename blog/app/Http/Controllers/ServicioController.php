@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\servicio_inmueble;
 
 class ServicioController extends Controller
 {
@@ -13,7 +14,9 @@ class ServicioController extends Controller
      */
     public function index()
     {
-        //
+        
+       $Servicio ['servicios']=servicio_inmueble::paginate(5);
+        return view('vistasAdmin/TablaServicio',$Servicio);
     }
 
     /**
@@ -23,7 +26,7 @@ class ServicioController extends Controller
      */
     public function create()
     {
-        //
+        return view('vistasAdmin/Servivcio');
     }
 
     /**
@@ -34,7 +37,8 @@ class ServicioController extends Controller
      */
     public function store(Request $request)
     {
-           $datosServicio=request()->all();
+           $datosServicio=request()->except('_token');
+            servicio_inmueble::insert($datosServicio);
         return response()->json($datosServicio);    }
 
     /**
@@ -45,7 +49,7 @@ class ServicioController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -77,8 +81,9 @@ class ServicioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($Id_servicio)
     {
-        //
+        servicio_inmueble::destroy($Id_servicio);
+           return view('vistasAdmin/TablaServicio');
     }
 }

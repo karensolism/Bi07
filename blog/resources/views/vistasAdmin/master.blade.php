@@ -256,9 +256,9 @@
                         <span>Gestión de Extras </span> 
                     </a>
                     <ul class="sub-menu">
-                        <li><a href="form_elements.html">Tipo de precio </a></li>
-                        <li><a href="form_plugins.html">Servicio </a></li>
-                        <li><a href="form_slider_switcher.html">Forma de Pago</a></li>
+                        <li><a href="TipoPrecio">Tipo de precio </a></li>
+                        <li><a href="Servicio">Servicio </a></li>
+                        <li><a href="FormaPago">Forma de Pago</a></li>
                        
                     </ul>
                 </li>
@@ -271,7 +271,7 @@
                     </a>
                     <ul class="sub-menu">
                         <li><a href="" target="_blank">Inmueble</a></li>
-                        <li><a href="" target="_blank">Galeria</a></li>
+                        <li><a href="Galeria/create" target="_blank">Galeria</a></li>
     
                     </ul>
                 </li>

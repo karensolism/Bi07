@@ -34,8 +34,14 @@ class GaleriaController extends Controller
      */
     public function store(Request $request)
     {
-           $datosGaleria=request()->all();
-        return response()->json($datosGaleria);
+        //   $datosGaleria=request()->all();
+
+        $image = $request->file('file');
+   
+        $imageName = time().'.'.$image->extension();
+        $image->move(public_path('images'),$imageName);
+   
+        return response()->json(['success'=>$imageName]);
     }
 
     /**

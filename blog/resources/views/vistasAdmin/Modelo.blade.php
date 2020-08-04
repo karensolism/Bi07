@@ -53,10 +53,10 @@
        <input type="text" id="txt_modelo" name="Modelo" class="text" value="">
        <br/> 
        <!--Mostrara los tipos de inmueble que existen -->
-       <select id="id_tipoInmueble" name="Id_tipofk" value="{{$datosModelo->Id_tipofk}}">
-       <!-- @foreach($tipoInmuebles as $tipo)
+       <select id="id_tipoInmueble" name="Id_tipofk" value="">
+       @foreach($tipoInmuebles as $tipo)
          <option value="{{$tipo->Id_tipo}}">{{$tipo->Tipo_inmueble}}</option>
-         @endforeach-->
+         @endforeach
        </select>
        <br/>
        <button class="button float-right">Enviar</button>

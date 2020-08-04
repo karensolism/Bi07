@@ -10,7 +10,7 @@
 
 @section('content')
 
-<form action="{{route('tipoPrecio.store')}}" method="POST" enctype="multipart/form-data">
+<form action="{{route('TipoPrecio.store')}}" method="POST" enctype="multipart/form-data">
 {{csrf_field()}}
         <!--comienzo del cuadro -->
       <div class="row">
