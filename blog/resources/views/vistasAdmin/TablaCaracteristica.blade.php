@@ -18,7 +18,7 @@
                     <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
                     <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
                 </div>
-                <h4 class="panel-title">UI Elements in Table <a href="Modelo/create" class="label label-success m-l-5 t-minus-1">Agregar</a></li>
+                <h4 class="panel-title">Catálogo de característica <a href="Modelo/create" class="label label-success m-l-5 t-minus-1">Agregar</a></li>
                 </h4>
             </div>
             <!-- end panel-heading -->
@@ -47,6 +47,7 @@
                                 <td>{{$modelo->Id_tipofk}}</td>
                                 <td class="with-btn" nowrap>
                                     <a href="#" class="btn btn-sm btn-primary width-60 m-r-2">Edit</a>
+                                    <br>  
                                     <a href="#" class="btn btn-sm btn-white width-60">Delete</a>
                                 </td>
                             </tr>

@@ -47,7 +47,8 @@
 		<div id="header" class="header navbar-default">
 			<!-- begin navbar-header -->
 			<div class="navbar-header">
-				<a href="index.html" class="navbar-brand"><span class="navbar-logo"></span> <b>Color</b> Admin</a>
+				<a href="index.html" class="navbar-brand"><span img src="../assets/images/home/logobienesraices.jpg" class="navbar-logo" alt=""></span> 
+					<b>Bi07</b> Bienes Raíces</a>
 				<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
@@ -61,7 +62,7 @@
 				<li>
 					<form class="navbar-form">
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Enter keyword" />
+							<input type="text" class="form-control" placeholder="Búsqueda" />
 							<button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
 						</div>
 					</form>
@@ -72,7 +73,7 @@
 						<span class="label">5</span>
 					</a>
 					<ul class="dropdown-menu media-list dropdown-menu-right">
-						<li class="dropdown-header">NOTIFICATIONS (5)</li>
+						<li class="dropdown-header">Notificaciones (5)</li>
 						<li class="media">
 							<a href="javascript:;">
 								<div class="media-left">
@@ -171,16 +172,16 @@
                         </div>
                         <div class="info">
                             <b class="caret pull-right"></b>
-                            Sean Ngu
+                            Administrador
                             <small>Front end developer</small>
                         </div>
                     </a>
                 </li>
                 <li>
                     <ul class="nav nav-profile">
-                        <li><a href="javascript:;"><i class="fa fa-cog"></i> Settings</a></li>
-                        <li><a href="javascript:;"><i class="fa fa-pencil-alt"></i> Send Feedback</a></li>
-                        <li><a href="javascript:;"><i class="fa fa-question-circle"></i> Helps</a></li>
+                        <li><a href="javascript:;"><i class="fa fa-cog"></i> Configuraciones</a></li>
+                        <li><a href="javascript:;"><i class="fa fa-pencil-alt"></i> Editar Perfil</a></li>
+                        <li><a href="javascript:;"><i class="fa fa-question-circle"></i> Ayuda</a></li>
                     </ul>
                 </li>
             </ul>
