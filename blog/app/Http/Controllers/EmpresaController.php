@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Empresa;
 
 class EmpresaController extends Controller
 {
@@ -13,7 +14,8 @@ class EmpresaController extends Controller
      */
     public function index()
     {
-        //
+        $Empresa ['empresas']=Empresa::paginate(5);
+        return view('vistasAdmin/TablaEmpresa',$Empresa);
     }
 
     /**
@@ -34,8 +36,12 @@ class EmpresaController extends Controller
      */
     public function store(Request $request)
     {
-         $datosEmpresa=request()->all();
+         $datosEmpresa=request()->except('_token');
+       Empresa::insert($datosEmpresa);
         return response()->json($datosEmpresa);
+
+        
+        
     }
 
     /**
@@ -55,9 +61,10 @@ class EmpresaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($Id_empresa)
     {
-        //
+        $datosEmpresa = Empresa::findOrFail($Id_empresa);
+        return view('vistasAdmin.Empresa', compact('datosEmpresa'));
     }
 
     /**
@@ -78,8 +85,9 @@ class EmpresaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($Id_empresa)
     {
-        //
+         Empresa::destroy($Id_empresa);
+           return view('vistasAdmin/Empresa');
     }
 }

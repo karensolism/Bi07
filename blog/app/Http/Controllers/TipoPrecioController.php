@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\TipoPrecio;
 
 class TipoPrecioController extends Controller
 {
@@ -13,7 +14,8 @@ class TipoPrecioController extends Controller
      */
     public function index()
     {
-       //
+     $TipoPrecio['precios']=TipoPrecio::paginate(5);
+     return view('vistasAdmin/TablaPrecio',$TipoPrecio);
     }
 
     /**
@@ -34,7 +36,8 @@ class TipoPrecioController extends Controller
      */
     public function store(Request $request)
     {
-           $datosTipoPrecio=request()->all();
+           $datosTipoPrecio=request()->except('_token');
+            TipoPrecio::insert($datosTipoPrecio);
         return response()->json($datosTipoPrecio);
     }
 
@@ -78,8 +81,9 @@ class TipoPrecioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($id_tipoPrecio)
     {
-        //
+        TipoPrecio::destroy($id_tipoPrecio);
+           return view('vistasAdmin/TablaPrecio');
     }
 }

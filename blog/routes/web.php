@@ -34,11 +34,14 @@ Route::get('/prueba', 'prueba@prueba')->name('prueba');
 //Route::get('/desarrolladora','DesarrolladoraController@create')->name('Desarrolladora');
 //Route::get('/galeria','GaleriaController@create')->name('Galeria');
 //Route::get('/ciudad','CiudadController@create')->name('Galeria');
-
+Route::resource('Ciudad','CiudadController');
+Route::resource('Estado','EstadoController');
 Route::resource('Modelo','ModeloController');
-Route::resource('TipoPrecio','ModeloController');
+Route::resource('TipoPrecio','TipoPrecioController');
 Route::resource('Ciudad','CiudadController');
 Route::resource('Colonia','ColoniaController');
 Route::resource('Asesor','AsesorController');
 Route::resource('Desarrolladora','DesarrolladoraController');
 Route::resource('Empresa','EmpresaController');
+Route::resource('Servicio','ServicioController');
+Route::resource('Galeria','GaleriaController');

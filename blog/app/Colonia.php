@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Colonia extends Model
 {
-    //
+    public $table = 'colonias';
 }

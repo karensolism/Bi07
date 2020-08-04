@@ -18,8 +18,7 @@
                     <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
                     <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-danger" data-click="panel-remove"><i class="fa fa-times"></i></a>
                 </div>
-               
-                <h4 class="panel-title">UI Elements in Table <span class="label label-success m-l-5 t-minus-1"><a href="Ciudad/create">Agregar</a></li></span></h4>
+                <h4 class="panel-title">UI Elements in Table <span class="label label-success m-l-5 t-minus-1"><a href="Estado/create">Agregar</a></li></span></h4>
             </div>
             <!-- end panel-heading -->
             <!-- begin panel-body -->
@@ -32,35 +31,34 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Ciudad</th>
                                 <th>Activo</th>
-                                <th>Estado</th>
+                                <th>Estado</th>                            
                                 <th width="1%"></th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($ciudads as $ciudad)
+                            @foreach($estados as $estado)
                             <tr>
-                                <td>{{$ciudad->id_ciudad}}</td>
-                                <td>{{$ciudad->Ciudad}}</td>
-                                <td>{{$ciudad->Activo}}</td>
-                                <td>{{$ciudad->id_estadofk}}</td>
+                                <td>{{$estado->Id_estado}}</td>
+                                <td>{{$estado->Activo}}</td>
+                                <td>{{$estado->Estado}}</td>
+                     
                                 <td class="with-btn" nowrap>
-                                    <a href="{{route('Ciudad.edit',$ciudad->id_ciudad)}}" class="btn btn-sm btn-primary width-60 m-r-2">Editar</a>
-                                   <form action="{{route('Ciudad.destroy',$ciudad->id_ciudad)}}" method="POST" >
+                                    <a href="{{route('Estado.edit',$estado->Id_estado)}}" class="btn btn-sm btn-primary width-60 m-r-2">Editar</a>
+                                   <form action="{{route('Estado.destroy',$estado->Id_estado)}}" method="POST" >
                                         {{csrf_field()}}
                                         {{method_field('Delete')}} 
                                     <button type="submit" onclick="return confirm('¿BORRAR?')">Borar</button>
                                     </form>
                                 </td>
                             </tr>
-                            
                             @endforeach
                         </tbody>
                     </table>
                 </div>
                 <!-- end table-responsive -->
-            </div>
+            </di
+            v>
             <!-- end panel-body -->
             <!-- begin hljs-wrapper -->
             <div class="hljs-wrapper">

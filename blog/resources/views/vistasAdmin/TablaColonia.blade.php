@@ -32,22 +32,22 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Ciudad</th>
+                                <th>Colonia</th>                                
                                 <th>Activo</th>
-                                <th>Estado</th>
+                                <th>Ciudad</th>
                                 <th width="1%"></th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($ciudads as $ciudad)
+                            @foreach($colonias as $colonia)
                             <tr>
-                                <td>{{$ciudad->id_ciudad}}</td>
-                                <td>{{$ciudad->Ciudad}}</td>
-                                <td>{{$ciudad->Activo}}</td>
-                                <td>{{$ciudad->id_estadofk}}</td>
+                                <td>{{$colonia->Id_colonia}}</td>
+                                <td>{{$colonia->colonia}}</td>
+                                <td>{{$colonia->Activo}}</td>
+                                <td>{{$colonia->id_ciudadfk}}</td>
                                 <td class="with-btn" nowrap>
-                                    <a href="{{route('Ciudad.edit',$ciudad->id_ciudad)}}" class="btn btn-sm btn-primary width-60 m-r-2">Editar</a>
-                                   <form action="{{route('Ciudad.destroy',$ciudad->id_ciudad)}}" method="POST" >
+                                    <a href="{{route('Colonia.edit',$colonia->Id_colonia)}}" class="btn btn-sm btn-primary width-60 m-r-2">Editar</a>
+                                   <form action="{{route('Colonia.destroy',$colonia->Id_colonia)}}" method="POST" >
                                         {{csrf_field()}}
                                         {{method_field('Delete')}} 
                                     <button type="submit" onclick="return confirm('¿BORRAR?')">Borar</button>

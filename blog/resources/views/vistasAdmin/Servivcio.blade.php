@@ -11,7 +11,7 @@
 @section('content')
 
 <form action="{{route('Servicio.store')}}" method="POST" enctype="multipart/form-data">
-
+{{csrf_field()}}
         <!--comienzo del cuadro -->
       <div class="row">
           <!-- begin col-12 -->
@@ -52,7 +52,8 @@
        <input type="text" id="txt_servivio" name="Servicio" class="text">
        <br/>  
 
-                           
+                 <br/>
+       <button class="button float-right">Enviar</button>           
 
                         </div>
                         <!-- end panel-body -->

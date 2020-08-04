@@ -52,8 +52,12 @@
        <br/>
        <input type="text" id="txt_ciudad" name="Ciudad" class="text">
        <br/> 
-       <input type="hidden" id="txt_IdEstado" name="Id_estadofk" value="" >
-       <!--id no visible-->
+      <select id="id_estadofk" name="Id_estadofk">
+         @foreach($estados as $estado)
+         <option value="{{$estado->Id_estado}}">{{$estado->Estado}}</option>  
+
+         @endforeach
+       </select>
        <br/>
               <button class="button float-right">Enviar</button>
 
